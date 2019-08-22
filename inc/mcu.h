@@ -36,4 +36,6 @@ void mcu_sleep(uint32_t ms);
  */
 void led_toggle(void);
 
+void mcu_printf(char* data);
+
 #endif // __MCU_H__
