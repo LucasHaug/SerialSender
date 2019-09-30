@@ -25,7 +25,7 @@ void mcu_init(void) {
 
     MX_GPIO_Init();
 
-    MX_USART1_UART_Init();
+    TARGET_USART_INIT();
 }
 
 void mcu_sleep(uint32_t ms) {
@@ -33,9 +33,9 @@ void mcu_sleep(uint32_t ms) {
 }
 
 void led_toggle(void) {
-    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+    HAL_GPIO_TogglePin(TARGET_LED_PORT, TARGET_LED_PIN);
 }
 
 void mcu_printf(char* data) {
-    HAL_UART_Transmit(&huart1, (uint8_t*) data, strlen(data), 100);
+    HAL_UART_Transmit(&TARGET_USART_HANDLER, (uint8_t*) data, strlen(data), 100);
 }

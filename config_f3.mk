@@ -4,19 +4,19 @@
 # 06/2019
 
 # Cube file name without .ioc extension
-PROJECT_NAME = serial_sender_g0
+PROJECT_NAME = serial_sender_f3
 VERSION := 1
 
 TARGET_BOARD := target_$(PROJECT_NAME)_$(VERSION)
 
-DEVICE_FAMILY  := STM32G0xx
-DEVICE_TYPE    := STM32G071xx
-DEVICE_DEF     := STM32G071xx
-DEVICE         := STM32G071RB
+DEVICE_FAMILY  := STM32F3xx
+DEVICE_TYPE    := STM32F303xx
+DEVICE_DEF     := STM32F303xE
+DEVICE         := STM32F303RE
 
 # Linker script file without .ld extension
 # Find it on cube folder after code generation
-DEVICE_LD_FILE := STM32G071RBTx_FLASH
+DEVICE_LD_FILE := STM32F303RETx_FLASH
 
 # Lib dir
 LIB_DIR  := lib
