@@ -10,9 +10,13 @@
 #include "mcu.h"
 
 #include "gpio.h"
-#include "main.h"
-#include "stm32f3xx_hal.h"
 #include "usart.h"
+
+#ifdef STM32F3
+#include "stm32f3xx_hal.h"
+#else
+#include "stm32g0xx_hal.h"
+#endif
 
 /*****************************************
  * Public Function Body Definitions
