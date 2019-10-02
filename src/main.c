@@ -25,13 +25,13 @@ int main(void) {
 
     for (;;) {
         for (int i = 0; i <= 13; i++) {
-            sprintf(send_data, "%d", i);
+            sprintf(send_data, "%d\r\n", i);
             mcu_printf(send_data);
             mcu_sleep(200);
         }
 
         for (int i = 13; i >= 0; i--) {
-            sprintf(send_data, "%d", i);
+            sprintf(send_data, "%d\r\n", i);
             mcu_printf(send_data);
             mcu_sleep(200);
         }
