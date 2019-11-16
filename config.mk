@@ -9,14 +9,14 @@ VERSION := 1
 
 TARGET_BOARD := target_$(PROJECT_NAME)_$(VERSION)
 
-DEVICE_FAMILY  := STM32G0xx
-DEVICE_TYPE    := STM32G071xx
-DEVICE_DEF     := STM32G071xx
-DEVICE         := STM32G071RB
-
-# Linker script file without .ld extension
-# Find it on cube folder after code generation
-DEVICE_LD_FILE := STM32G071RBTx_FLASH
+# Device configs
+ifeq ($(PROJECT_NAME), serial_sender_g0)
+include serial_sender_g0_config.mk
+else ifeq ($(PROJECT_NAME), serial_sender_f3)
+include serial_sender_f3_config.mk
+else
+$(error Unknown Device)
+endif
 
 # Lib dir
 LIB_DIR  := lib
