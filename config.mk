@@ -5,7 +5,7 @@
 
 # Cube file name without .ioc extension
 PROJECT_NAME = serial_sender_g0
-VERSION := 1
+VERSION := v1
 
 TARGET_BOARD := target_$(PROJECT_NAME)_$(VERSION)
 
